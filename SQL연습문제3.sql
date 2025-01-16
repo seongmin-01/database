@@ -199,6 +199,14 @@ join  `Lecture` as c on b.regLecNo = c.lecNo    #강좌번호
 WHERE `regGrade` != 'F'
 GROUP BY  `stdNo`;
 
+
+ select *
+ from `Student` as a
+join  `Register` as b on  a.stdNo = b.regStdNo  #학번
+join  `Lecture` as c on b.regLecNo = c.lecNo    #강좌번호
+WHERE `regGrade` != 'F'
+GROUP BY  `stdNo`;
+
 select * from `Lecture`,`Register`;
     
 #실습 3-30 comcat - 하나의 문자값으로 연결
